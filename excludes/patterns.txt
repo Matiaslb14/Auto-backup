@@ -1,0 +1,12 @@
+*.cache
+*__pycache__*
+*.pyc
+*.log
+node_modules
+.git
+.venv
+.DS_Store
+Trash
+*.iso
+*.qcow2
+*.vdi

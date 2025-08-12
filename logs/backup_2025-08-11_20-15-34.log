@@ -1,0 +1,5 @@
+== Inicio backup: lun 11 ago 2025 20:15:34 -04
+Fuentes: /home/mati/Documents /home/mati/linux-projects /etc
+Destino: /home/mati/linux-projects/07-auto-backup/backups/backup_mati_2025-08-11_20-15-34.tar.gz
+Retención (días): 7
+[ERROR] tar salió con código 2
