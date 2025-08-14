@@ -1,84 +1,78 @@
-# Proyecto 07 - Backup Automático y Restauración en Bash
+🗄️ Project 07 – Automatic Backup & Restore in Bash
 
-Herramienta en **Bash** para realizar copias de seguridad comprimidas (`.tar.gz`) de directorios seleccionados, con opciones de exclusión, retención automática y restauración rápida.
+Tool written in Bash to create compressed (.tar.gz) backups of selected directories, with exclusion options, automatic retention, and quick restoration.
 
-## 🚀 Características
-- Respaldo comprimido con sello de tiempo.
-- Exclusión de carpetas y archivos mediante patrón.
-- Filtra automáticamente directorios inexistentes.
-- Evita auto-incluir el propio proyecto en el backup.
-- Retención automática (borra backups antiguos según configuración).
-- Soporta `pigz` para compresión más rápida.
-- Restauración a cualquier directorio.
-- Preparado para ejecución automática con `cron` o `systemd`.
+🚀 Features
 
-## 📂 Estructura
+Compressed backups with timestamp.
+Exclusion of folders and files via pattern matching.
+Automatically skips non-existent directories.
+Prevents self-inclusion of the project in backups.
+Automatic retention (deletes old backups according to settings).
+Supports pigz for faster compression.
+Restoration to any directory.
+Ready for automation with cron or systemd.
 
+📂 Structure
 07-auto-backup/
-├── backups/ # Carpeta donde se guardan los .tar.gz
-├── excludes/ # Patrones a excluir
-├── logs/ # Registros de cada ejecución
+├── backups/      # Folder where .tar.gz files are stored
+├── excludes/     # Exclusion patterns
+├── logs/         # Execution logs
 ├── scripts/
-│ ├── backup.sh # Script principal de backup
-│ └── restore.sh # Script de restauración
-└── .env # Configuración del proyecto
+│   ├── backup.sh # Main backup script
+│   └── restore.sh# Restore script
+└── .env          # Project configuration
 
-## ⚙️ Configuración
-Edita el archivo `.env` para definir:
-```bash
-# Carpetas a respaldar
+⚙️ Configuration
+
+Edit the .env file to define:
+
+# Folders to back up
 BACKUP_SOURCES=("$HOME/linux-projects" "$HOME/Documents")
 
-# Carpeta destino de backups
+# Destination folder for backups
 BACKUP_DEST="$PWD/backups"
 
-# Prefijo de nombre
+# Backup name prefix
 BACKUP_PREFIX="backup"
 
-# Días para mantener backups
+# Days to keep backups
 RETENTION_DAYS=7
 
-# Correo para notificaciones (opcional, requiere 'mail' configurado)
+# Email for notifications (optional, requires 'mail' configured)
 EMAIL_TO=""
 
-# Archivo de exclusiones
+# Exclusion file
 EXCLUDES_FILE="$PWD/excludes/patterns.txt"
 
-Ejemplo de excludes/patterns.txt:
+Example excludes/patterns.txt:
 
 *.cache
 *.log
 node_modules
 .git
 
-▶️ Uso
+▶️ Usage
 
-Backup manual:
-
+Manual backup:
 ./scripts/backup.sh
 
-Listar contenido de un backup:
-
+List the contents of a backup:
 ./scripts/restore.sh --list backups/backup_mati_2025-08-11_20-15-34.tar.gz
 
-Restaurar en carpeta específica:
-
+Restore to a specific folder:
 ./scripts/restore.sh backups/backup_mati_2025-08-11_20-15-34.tar.gz ~/restore_test
 
-⏱️ Automatización con cron
-
+⏱️ Automation with cron
+Edit crontab:
 crontab -e
 
-Agrega:
-
+Add:
 0 2 * * * /bin/bash /home/mati/linux-projects/07-auto-backup/scripts/backup.sh >> /home/mati/linux-projects/07-auto-backup/logs/cron.log 2>&1
 
-🛠️ Requisitos
+🛠️ Requirements
 
 Bash 4+
-
-tar, gzip (o pigz opcional)
-
-mailutils (opcional para notificaciones por correo)
-
-Permisos de lectura en las carpetas a respaldar
+tar, gzip (or optional pigz for faster compression)
+mailutils (optional for email notifications)
+Read permissions for the folders to be backed up
