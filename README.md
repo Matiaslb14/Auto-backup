@@ -1,4 +1,4 @@
-# 🗄️ Project 07 – Automatic Backup & Restore in Bash
+# 🗄️ Automatic Backup & Restore in Bash
 
 Tool written in Bash to create compressed (.tar.gz) backups of selected directories, with exclusion options, automatic retention, and quick restoration.
 
