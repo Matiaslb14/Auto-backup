@@ -1,4 +1,4 @@
-🗄️ Project 07 – Automatic Backup & Restore in Bash
+# 🗄️ Project 07 – Automatic Backup & Restore in Bash
 
 Tool written in Bash to create compressed (.tar.gz) backups of selected directories, with exclusion options, automatic retention, and quick restoration.
 
@@ -27,22 +27,22 @@ Ready for automation with cron or systemd.
 
 Edit the .env file to define:
 
-# Folders to back up
+Folders to back up
 BACKUP_SOURCES=("$HOME/linux-projects" "$HOME/Documents")
 
-# Destination folder for backups
+Destination folder for backups
 BACKUP_DEST="$PWD/backups"
 
-# Backup name prefix
+Backup name prefix
 BACKUP_PREFIX="backup"
 
-# Days to keep backups
+Days to keep backups
 RETENTION_DAYS=7
 
-# Email for notifications (optional, requires 'mail' configured)
+Email for notifications (optional, requires 'mail' configured)
 EMAIL_TO=""
 
-# Exclusion file
+Exclusion file
 EXCLUDES_FILE="$PWD/excludes/patterns.txt"
 
 Example excludes/patterns.txt:
