@@ -85,6 +85,15 @@ Then add:
 | `bash 4+` | Shell environment | Entorno de shell |
 | `tar`, `gzip` / `pigz` | Compression utilities | Utilidades de compresión |
 
+## 🖼️ Screenshot / Captura de Ejecución  
+
+**EN:** Below is an example of the Auto-Backup script running on a Linux system, showing the generated `.tar.gz` backup file and project folders.  
+**ES:** A continuación se muestra un ejemplo del script Auto-Backup ejecutándose en Linux, mostrando el archivo `.tar.gz` generado y las carpetas del proyecto.  
+
+<div align="center">
+  <img src="./images/auto_backup_run.png" alt="Auto Backup Run" width="75%">
+</div>
+
 ## 🧠 Notes / Notas  
 
 **EN:**  
