@@ -91,7 +91,7 @@ Then add:
 **ES:** A continuación se muestra un ejemplo del script Auto-Backup ejecutándose en Linux, mostrando el archivo `.tar.gz` generado y las carpetas del proyecto.  
 
 <div align="center">
-  <img src="./images/auto_backup_run.png" alt="Auto Backup Run" width="75%">
+  <img src="./images/auto_backup_run.jpg" alt="Auto Backup Run" width="75%">
 </div>
 
 ## 🧠 Notes / Notas  
