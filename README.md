@@ -27,8 +27,6 @@ Ideal para administradores de sistemas y estudiantes de DevOps que necesitan aut
 | Optional pigz support for speed | Soporte opcional para `pigz` (compresión más rápida) |
 | Ready for cron or systemd automation | Listo para automatización con cron o systemd |
 
----
-
 ## 📂 Structure / Estructura del Proyecto  
 
 07-auto-backup/
@@ -39,8 +37,6 @@ Ideal para administradores de sistemas y estudiantes de DevOps que necesitan aut
 │ ├── backup.sh # Main backup script / Script principal
 │ └── restore.sh # Restore script / Script de restauración
 └── .env # Project configuration / Configuración del proyecto
-
----
 
 ## ⚙️ Configuration / Configuración  
 
@@ -63,8 +59,6 @@ Example (`excludes/patterns.txt`):
 node_modules
 .git
 
----
-
 ## ▶️ Usage / Uso  
 
 | Action (EN) | Comando | Acción (ES) |
@@ -72,8 +66,6 @@ node_modules
 | Manual backup | `./scripts/backup.sh` | Respaldar manualmente |
 | List backup contents | `./scripts/restore.sh --list backups/backup_mati_2025-08-11_20-15-34.tar.gz` | Listar contenido de respaldo |
 | Restore backup | `./scripts/restore.sh backups/backup_mati_2025-08-11_20-15-34.tar.gz ~/restore_test` | Restaurar respaldo |
-
----
 
 ## ⏱️ Automation / Automatización  
 
@@ -93,8 +85,6 @@ Then add:
 | `bash 4+` | Shell environment | Entorno de shell |
 | `tar`, `gzip` / `pigz` | Compression utilities | Utilidades de compresión |
 
----
-
 ## 🧠 Notes / Notas  
 
 **EN:**  
@@ -102,7 +92,5 @@ This project is part of my Linux Automation & Security Toolkit series, focusing 
 
 **ES:**  
 Este proyecto forma parte de mi serie Linux Automation & Security Toolkit, enfocada en scripting práctico para la confiabilidad y seguridad de la infraestructura.  
-
----
 
 👨‍💻 Developed by Matías Lagos Barra — Cloud & DevSecOps Engineer
